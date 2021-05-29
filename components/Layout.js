@@ -11,7 +11,7 @@ const Layout = ({ children, title, description }) => {
         <title>{title}</title>
         <meta name='description' content={description} />
       </Head>
-      <div className='pt-5 md:pt-20'>{children}</div>
+      <div className='pt-32 md:pt-40'>{children}</div>
     </div>
   )
 }
