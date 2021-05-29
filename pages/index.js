@@ -1,11 +1,13 @@
 /* eslint-disable no-undef */
 import CTA from '../components/CTA'
 import Layout from '../components/Layout'
+import Services from '../components/Services'
 
-const Home = () => {
+const Home = ({ services }) => {
   return (
     <Layout>
       <CTA />
+      <Services services={services} />
     </Layout>
   )
 }

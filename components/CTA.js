@@ -21,7 +21,9 @@ const CTA = () => {
           <p className='w-40 mx-auto mb-3 text-center text-gray-100 md:mx-0 md:text-start md:mb-0 md:w-auto'>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit!
           </p>
-          <button className='font-light bg-[#0e3757] hover:bg-[#0C111D] transition duration-300  md:w-auto w-full py-2 px-5 rounded capitalize'>
+          <button
+            aria-label='Call now'
+            className='font-light bg-[#0e3757] hover:bg-[#0C111D] transition duration-300  md:w-auto w-full py-2 px-5 rounded capitalize'>
             call now
           </button>
         </div>
