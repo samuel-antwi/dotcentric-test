@@ -2,12 +2,14 @@
 import CTA from '../components/CTA'
 import Layout from '../components/Layout'
 import Services from '../components/Services'
+import Testimonials from '../components/Testimonial'
 
 const Home = ({ services }) => {
   return (
     <Layout>
       <CTA />
       <Services services={services} />
+      <Testimonials />
     </Layout>
   )
 }

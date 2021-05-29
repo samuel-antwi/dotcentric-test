@@ -3,12 +3,34 @@ import { FooterLogo, NavbarLogo } from '../icons'
 import { CgMenu } from 'react-icons/cg'
 import { useStateProvider } from '../context/StateContext'
 import MobileNav from './MobileNav'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import NavLinkItems from './NavLinkItems'
 
 const Navbar = () => {
   const { scroll } = useStateProvider()
-  const [showSideMenu, setShowSideMenu] = useState(false)
+  const [mobileMenu, setMobileMenu] = useState(false)
+
+  const [isBrowser, setIsBrowser] = useState(false)
+
+  // This code executes on the client side only after the components mounts
+  useEffect(() => {
+    setIsBrowser(true)
+  }, [])
+
+  // Function to open the mobile menu
+  const openSideMenu = () => {
+    if (isBrowser) {
+      document.body.style.overflow = 'hidden'
+    }
+    setMobileMenu(true)
+  }
+
+  const closeSideMenu = () => {
+    setMobileMenu(false)
+    if (isBrowser) {
+      document.body.style.overflow = 'scroll'
+    }
+  }
 
   return (
     <div>
@@ -31,14 +53,14 @@ const Navbar = () => {
             </div>
           </div>
           <button
-            onClick={() => setShowSideMenu(!showSideMenu)}
+            onClick={openSideMenu}
             className='md:hidden focus:outline-none'
             aria-label='Open mobile navs'>
             <CgMenu className={`${scroll && 'text-gray-100'}`} size={30} />
           </button>
         </div>
       </nav>
-      <MobileNav showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
+      <MobileNav mobileMenu={mobileMenu} closeSideMenu={closeSideMenu} />
     </div>
   )
 }

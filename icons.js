@@ -96,7 +96,7 @@ export const FooterLogo = () => {
   )
 }
 
-export const SpeechMark = () => {
+export const SpeechMarkIcon = () => {
   return (
     <svg
       width='50px'

@@ -1,15 +1,21 @@
 import { MdClose } from 'react-icons/md'
 import NavLinkItems from './NavLinkItems'
 
-const SideNav = ({ showSideMenu, setShowSideMenu }) => {
+const SideNav = ({ mobileMenu, closeSideMenu }) => {
+  // Page scrools to the top wheever a mobile menuis opened
+  if (mobileMenu) {
+    window.scrollTo(0, 0)
+  }
+
   return (
     <div
+      onClick={closeSideMenu}
       className={` ${
-        showSideMenu ? '-translate-x-0' : '-translate-x-full'
-      }  bg-secondary w-full p-8 text-blue-50  absolute inset-y-0 z-[20] md:relative md:hidden transition duration-500 left-0 transform h-[100vh]   ease-in-out`}>
+        mobileMenu ? '-translate-x-0' : '-translate-x-full'
+      }  bg-secondary w-full p-8 text-blue-50  absolute inset-y-0 z-[20] md:relative md:hidden transition duration-500 left-0 transform h-[100vh] ease-in-out`}>
       <div>
         <div className='flex items-center justify-between'>
-          <button aria-label='hide mobile nav' onClick={() => setShowSideMenu(!showSideMenu)}>
+          <button aria-label='hide mobile nav' onClick={closeSideMenu}>
             <MdClose className='text-gray-100' size={25} />
           </button>
         </div>
