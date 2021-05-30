@@ -1,8 +1,14 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Getting Started and running on local machine
 
-## Getting Started
+1. Download extract the zip file on your local machine.
+2. Open with any code editor of your choice.
+3. Run npm install or yarn install to install all the necessary dependencies.
 
-First, run the development server:
+## Create .env.local file inside the root of the project
+
+Set NEXT_PUBLIC_API_URL= the api given in the test
+
+## Run the development server:
 
 ```bash
 npm run dev
@@ -12,23 +18,24 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Framework: Next.js
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+In as much as I could have built this challenge with vanilla Javascript, I chose Next.js which is a framework on top of React for the obvious reasons:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Faster page loading
 
-## Learn More
+Apps built with Next.js is faster when rendering pages than apps built with Create React App
 
-To learn more about Next.js, take a look at the following resources:
+## File system routing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Apps built with Next.js do not need extra libraries such as React Router or Reach Router. You just have to create file under pages and you get automatic routing. This helps to speed up development time and ship application more faster.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Automatic code spliting.
 
-## Deploy on Vercel
+Code splitting makes it possible to split application code up into a series of lightweight bundles. Instead of loading all of our JavaScript, our application will only load the bundle needed.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## SEO
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Next.js is Search Engine Optimization (SEO) friendly as it uses Server-Side Rendering which makes site accessible to web crawlers.
+
+Note that, the above reasons might not be applicable to this challenge. However, I wanted to mention these to support my decision for using Next.js. It doesn't mean I will build every project with this framework.
