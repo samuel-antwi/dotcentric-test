@@ -18,7 +18,9 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## View live [Demo](https://dotcentric-test.netlify.app/)
+## View live [Demo](https://dotcentric-test.netlify.app/) on Netlify
+
+## View live [Demo](https://dotcentric-test.vercel.app/) on Vercel
 
 ## Framework: Next.js
 
