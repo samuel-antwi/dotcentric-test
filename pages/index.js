@@ -6,11 +6,24 @@ import Services from '../components/Services'
 import Testimonials from '../components/Testimonial'
 
 const Home = ({ services }) => {
+  // Dummy data for testimonials
+  const user = {
+    name: 'Roy Barber',
+    company: 'Dotcentric',
+    company2: 'Damage',
+    message:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit Soluta ratione sit ipsam expedita fuga aut veniam error aspernatur adipisicing',
+  }
   return (
     <Layout>
       <CTA />
       <Services services={services} />
-      <Testimonials />
+      <Testimonials
+        name={user.name}
+        company2={user.company2}
+        company={user.company}
+        message={user.message}
+      />
       <ContactForm />
     </Layout>
   )

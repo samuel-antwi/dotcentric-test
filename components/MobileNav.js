@@ -10,7 +10,7 @@ const SideNav = ({ mobileMenu, toggleMobileMenu }) => {
       <div>
         <div className='flex items-center justify-between'>
           <button aria-label='hide mobile nav' onClick={toggleMobileMenu}>
-            <MdClose className='text-gray-100' size={25} />
+            <MdClose className='text-gray-100 hover:text-primary' size={25} />
           </button>
         </div>
         <div className='flex flex-col pt-10 '>
