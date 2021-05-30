@@ -13,7 +13,14 @@ const CTA = () => {
           </p>
         </div>
         <div className='px-4 mx-auto xl:max-w-6xl md:max-w-4xl xl:px-0 md:px-20'>
-          <Image src='/images/cta-banner.png' width={1822} height={1110} alt='CTA Banner' />
+          <Image
+            src='/images/cta-banner.png'
+            width={1822}
+            height={1110}
+            alt='CTA Banner'
+            property={true}
+            loading='eager'
+          />
         </div>
       </div>
       <div className='py-4 -mt-2 text-white bg-primary'>
