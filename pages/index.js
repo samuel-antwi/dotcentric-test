@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+import ContactForm from '../components/ContactForm'
 import CTA from '../components/CTA'
 import Layout from '../components/Layout'
 import Services from '../components/Services'
@@ -10,6 +11,7 @@ const Home = ({ services }) => {
       <CTA />
       <Services services={services} />
       <Testimonials />
+      <ContactForm />
     </Layout>
   )
 }
