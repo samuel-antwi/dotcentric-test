@@ -9,64 +9,64 @@ const ContactForm = () => {
   const { handleChange, values, handleSubmit, errors } = useForm(validate)
 
   return (
-    <main className='max-w-xl mx-auto mb-20'>
-      <div className='px-5'>
+    <main className='max-w-md px-5 mx-auto mb-10 md:px-0 md:mb-20'>
+      <div className='text-center md:text-left'>
         <Heading title='contact about awesomeness' />
-        <p className='mb-10 text-center text-gray-500'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, adipisci, minus eius
-          cumque nulla ipsum fugiat enim?
+        <p className='mb-10 text-gray-500 '>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua.
         </p>
-        <div className='max-w-md mx-auto'>
-          <form onSubmit={handleSubmit}>
-            <InputField
-              label='Your name'
-              name='name'
-              type='text'
-              placeholder='Please enter your name'
-              handleChange={handleChange}
-              value={values.name}
-              errors={errors?.name}
-            />
-            <InputField
-              label='Your Telephone Number'
-              name='phone'
-              type='text'
-              placeholder='Please enter your phone number'
-              handleChange={handleChange}
-              value={values.phone}
-              errors={errors?.phone}
-            />
-            <InputField
-              label='Your email'
-              name='email'
-              type='text'
-              placeholder='Error: Please enter a valid email'
-              handleChange={handleChange}
-              value={values.email}
-              errors={errors?.email}
-            />
-            <InputField
-              label='Your message'
-              name='message'
-              type='textarea'
-              placeholder='Please enter your message'
-              handleChange={handleChange}
-              value={values.message}
-              errors={errors?.message}
-            />
-            <div className='flex justify-end mt-5'>
-              <button
-                className={xcls(
-                  'bg-secondary hover:bg-[#0C111D] ',
-                  'transition duration-300 w-full md:w-auto',
-                  'text-gray-100 py-2 px-5 rounded font-light text-sm'
-                )}
-                type='submit'>
-                Submit
-              </button>
-            </div>
-          </form>
-        </div>
+      </div>
+      <div className='max-w-md mx-auto md:px-6'>
+        <form onSubmit={handleSubmit}>
+          <InputField
+            label='Your name'
+            name='name'
+            type='text'
+            placeholder='Please enter your name'
+            handleChange={handleChange}
+            value={values.name}
+            errors={errors?.name}
+          />
+          <InputField
+            label='Your Telephone Number'
+            name='phone'
+            type='text'
+            placeholder='Please enter your phone number'
+            handleChange={handleChange}
+            value={values.phone}
+            errors={errors?.phone}
+          />
+          <InputField
+            label='Your email'
+            name='email'
+            type='text'
+            placeholder='Error: Please enter a valid email'
+            handleChange={handleChange}
+            value={values.email}
+            errors={errors?.email}
+          />
+          <InputField
+            label='Your message'
+            name='message'
+            type='textarea'
+            placeholder='Please enter your message'
+            handleChange={handleChange}
+            value={values.message}
+            errors={errors?.message}
+          />
+          <div className='flex justify-end mt-5'>
+            <button
+              className={xcls(
+                'bg-secondary hover:bg-[#0C111D] ',
+                'transition duration-300 w-full md:w-auto',
+                'text-gray-100 py-2 px-5 rounded font-light text-sm'
+              )}
+              type='submit'>
+              Submit
+            </button>
+          </div>
+        </form>
       </div>
     </main>
   )
@@ -83,7 +83,7 @@ const InputField = ({ name, values, type, label, placeholder, errors, handleChan
           <input
             className={`${
               errors ? 'border border-red-500' : 'border-gray-300'
-            } flex-1 text-sm placeholder-gray-400`}
+            } flex-1 text-sm placeholder-gray-400 rounded`}
             placeholder={placeholder}
             type={type}
             name={name}
@@ -94,7 +94,7 @@ const InputField = ({ name, values, type, label, placeholder, errors, handleChan
           <textarea
             className={`${
               errors ? 'border border-red-500' : 'border-gray-300'
-            } flex-1 text-sm placeholder-gray-400`}
+            } flex-1 text-sm placeholder-gray-400 rounded`}
             placeholder={placeholder}
             type={type}
             name={name}

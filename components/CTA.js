@@ -3,9 +3,9 @@ import Heading from './Heading'
 
 const CTA = () => {
   return (
-    <>
-      <div className='max-w-5xl mx-auto xl:max-w-6x'>
-        <div className='max-w-xl mx-auto mb-8 text-center md:mb-20'>
+    <div className='mb-10 md:mb-20'>
+      <div className='max-w-5xl mx-auto xl:max-w-6x '>
+        <div className='max-w-xl mx-auto mb-8 text-center md:mb-20 '>
           <Heading title=' we do awesome things' />
           <p className='px-4 text-sm text-gray-500 md:px-0 md:text-lg'>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta ratione sit ipsam
@@ -35,7 +35,7 @@ const CTA = () => {
           </button>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
