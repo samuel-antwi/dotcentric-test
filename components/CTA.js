@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Heading from './Heading'
+import xcls from 'xcls'
 
 const CTA = () => {
   return (
@@ -25,14 +26,23 @@ const CTA = () => {
       </div>
       <div className='py-4 -mt-2 text-white bg-primary'>
         <div className='items-center justify-between max-w-4xl px-5 mx-auto md:flex xl:max-w-6xl'>
-          <p className='w-40 mx-auto mb-3 text-center text-gray-100 md:mx-0 md:text-start md:mb-0 md:w-auto'>
+          <p
+            className={xcls(
+              'w-40 mx-auto mb-3 text-center text-gray-100 ',
+              'md:mx-0 md:text-start md:mb-0 md:w-auto'
+            )}>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit!
           </p>
-          <button
-            aria-label='Call now'
-            className='font-light bg-[#0e3757] hover:bg-[#0C111D] transition duration-300  md:w-auto w-full py-2 px-5 rounded capitalize'>
-            call now
-          </button>
+          <a href='tel: 01234432123'>
+            <button
+              className={xcls(
+                'font-light block bg-[#0e3757]  hover:bg-[#0C111D] transition',
+                'duration-300  md:w-auto w-full py-2 px-5 rounded capitalize'
+              )}
+              aria-label='Call now'>
+              Call now
+            </button>
+          </a>
         </div>
       </div>
     </div>
