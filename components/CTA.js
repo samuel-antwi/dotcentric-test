@@ -18,7 +18,7 @@ const CTA = () => {
             width={1822}
             height={1110}
             alt='CTA Banner'
-            property={true}
+            priority={true}
             loading='eager'
           />
         </div>

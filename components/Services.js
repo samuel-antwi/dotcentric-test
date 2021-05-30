@@ -1,4 +1,5 @@
 import Heading from './Heading'
+import Image from 'next/image'
 
 const Services = ({ services }) => {
   return (
@@ -28,7 +29,7 @@ const Services = ({ services }) => {
             return (
               <div className='col-span-1 mb-7' key={service.id}>
                 <div className='flex justify-center mb-2'>
-                  <img className='w-32 h-32' src={serviceImage} alt='Service Baner' />
+                  <Image src={serviceImage} width={120} height={120} alt='Service Baner' />
                 </div>
                 <span className='text-center'>
                   <h1 className='mb-3 text-xl'>{service.name}</h1>
