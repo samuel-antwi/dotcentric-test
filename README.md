@@ -4,7 +4,7 @@
 2. Open with any code editor of your choice.
 3. Run npm install or yarn install to install all the necessary dependencies.
 
-## Create .env.local file inside the root of the project
+### Create .env.local file inside the root of the project
 
 Set NEXT_PUBLIC_API_URL= the api given in the test
 
@@ -18,7 +18,7 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Framework: Next.js
+### Framework: Next.js
 
 In as much as I could have built this challenge with vanilla Javascript, I chose Next.js which is a framework on top of React for the obvious reasons:
 
