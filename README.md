@@ -2,7 +2,7 @@
 
 1. Download extract the zip file on your local machine.
 2. Open with any code editor of your choice.
-3. Run npm install or yarn install to install all the necessary dependencies.
+3. Run 'npm install' or 'yarn install' to install all the necessary dependencies.
 
 ### Create .env.local file inside the root of the project
 
@@ -18,7 +18,7 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## View live [Demo](https://mcg-challenge.vercel.app/)
+## View live [Demo](https://dotcentric-test.netlify.app/)
 
 ## Framework: Next.js
 
@@ -34,7 +34,7 @@ Apps built with Next.js do not need extra libraries such as React Router or Reac
 
 #### Automatic code spliting.
 
-Code splitting makes it possible to split application code up into a series of lightweight bundles. Instead of loading all of our JavaScript, our application will only load the bundle needed.
+Code splitting makes it possible to split application code up into a series of lightweight bundles. Instead of loading all of our Javascript, our application will only load the bundle needed.
 
 #### SEO
 
@@ -49,11 +49,11 @@ Note that, the above reasons might not be applicable to this challenge. However,
 ### I used Tailwindcss to style the application and the reasons are:
 
 1. Easy to customise
-2. Faster protyping any UI
+2. Faster prototyping any UI
 3. Smaller bundle size in production
 4. Team collaboration
 5. Future Maintenance
-6. Ability to build any complex UI without writing too much plain css
+6. Ability to build any complex UI without writing too much custom css
 
 You can see with tailwind css, each component has its own inline styling which makes it easy for debugging and making changes in the future. It helps developers to always be on the same page when it come to component styling.
 
@@ -65,7 +65,7 @@ These are some options I had:
 2. I could have also used tailwind '@apply' functionality to clean the return JSX'
 3. There are other libraries that can be used with tailwind to make life easy such as twin.macro
 
-You will notise that, when the classes get longer than needed I used a libary called 'clsx' together wit prettier to make the return JSX a bit cleaner.
+You will notise that, when the classes get longer than needed I used a libary called 'clsx' together with prettier to make the html element a bit cleaner.
 
 You might be wondering why would you add extra library to a small web application and the answer is simple. With tailwind CSS, you have the abilty to ship to production only the tailwind classes used in the apllication. This is made possible by purging all unused classes and tailwind css will be smart enough not to ship them to producton. According to the documentation, an average website using tailwind css ships less than 20kb bundle size to production when purged is used. In this application, I purged all unused classes inside tailwind.config.js file.
 
@@ -76,7 +76,7 @@ You might be wondering why would you add extra library to a small web applicatio
 #### xcls
 
 In order not to defeat the purpose of this test, I decided not to rely too much on 3rd party libaries.
-When I am building production app, there are other libraries that help to speed development process such as React-hook-form or Formik to handle the input form.
+When I am building production app, there are other libraries that help to speed up development process such as React-hook-form or Formik to handle the input form as well as form validation. I did not use any of these libraries and decided to implement my own form validation.
 
 ## Files and Component structure
 
