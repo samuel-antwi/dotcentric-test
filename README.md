@@ -61,7 +61,7 @@ These are some options I had:
 2. I could have also used tailwind '@apply' functionality to clean the return JSX'
 3. There are other libraries that can be used with tailwind to make life easy such as twin.macro
 
-### You will notise that, when the classes get longer than needed I used a libary called 'clsx' together wit prettier to make the return JSX a bit cleaner.
+ You will notise that, when the classes get longer than needed I used a libary called 'clsx' together wit prettier to make the return JSX a bit cleaner.
 
 You might be wondering why would you add extra library to a small web application and the answer is simple. With tailwind CSS, you have the abilty to ship to production only the tailwind classes used in the apllication. This is made possible by purging all unused classes and tailwind css will be smart enough not to ship them to producton. According to the documentation, an average website using tailwind css ships less than 20kb bundle size to production when purged is used. In this application, I purged all unused classes inside tailwind.config.js file.
 
@@ -69,7 +69,7 @@ You might be wondering why would you add extra library to a small web applicatio
 
 #### React-icons
 
-#### clsx
+#### xcls
 
 In order not to defeat the purpose of this test, I decided not to rely too much on 3rd party libaries.
 When I am building production app, there are other libraries that help to speed development process such as React-hook-form or Formik to handle the input form.
@@ -78,3 +78,9 @@ When I am building production app, there are other libraries that help to speed 
 
 One of the strongest architectuarl designs of React is its Component based approach. This makes it very intuitive to build reusable components, easy to maintain and encourages code readability in React applicaton.
 Though this application is a sigle page with only few routing, yet it consists of different and many re-usable component.
+
+https://res.cloudinary.com/devantwi/image/upload/v1622403585/google-lighthouse_tnuwex.png
+
+
+
+![Screenshot](google-lighthouse.png)
