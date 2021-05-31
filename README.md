@@ -102,6 +102,10 @@ I built this app with performance in mind. There are four main performance indic
 
 I use Google Lighthouse which is an open-source, automated tool for improving the quality of web pages. When I build websites, I use it to check the four indicators I mentioned above. By using this tool, you can check and make improvement of a web page. Due to time constraint, I couldn't resolve all the issues reported by Lighthouse. However, I made sure they were in good shape and ready for production.
 
+## Cross Browser Compatibility
+
+Using Lambdatest, I carried out cross browser compatibility on 4 different browsers including Chrome, Firefox, Safari and Edge. I had issue where most of the browsers didn't dispaly svg images as expected so I had to revert using jpg format to fix that issue.
+
 ## Git Flow
 
 I implemented CI/CD and setup the application to run on two different environments on netlify. I then connected it to github repository. This esnures any code pushed to the main/master branch will automatically trigger the build command on netlify which then builds the production and preview vesions of the app.

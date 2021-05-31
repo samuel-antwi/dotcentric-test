@@ -1,9 +1,14 @@
 import Heading from './Heading'
 import Image from 'next/image'
+import xcls from 'xcls'
 
 const Services = ({ services }) => {
   return (
-    <main className='flex justify-center max-w-4xl mx-auto mb-2 md:mb-20 xl:max-w-6xl md:px-0'>
+    <main
+      className={xcls(
+        'flex justify-center max-w-4xl ',
+        'mx-auto mb-2 md:mb-20 xl:max-w-6xl md:px-0'
+      )}>
       <div className='px-5 md:px-0'>
         <div className='max-w-2xl mx-auto mb-8 text-center md:mb-20 '>
           <Heading title='we do really awesome things' />
@@ -22,14 +27,21 @@ const Services = ({ services }) => {
         </div>
         <div className='grid-cols-3 gap-10 md:grid'>
           {services.map((service, index) => {
-            const serviceImage =
-              (index === 0 && '/images/service-badge.svg') ||
-              (index === 1 && '/images/service-badge-2.svg') ||
-              (index === 2 && '/images/service-badge-3.svg')
             return (
-              <div className='col-span-1 mb-8 md:px-5 md:mb-0' key={service.id}>
-                <div className='flex justify-center mb-2'>
-                  <Image src={serviceImage} width={150} height={150} alt='Service Baner' />
+              <div className='col-span-1 mb-8 md:px-5 md:mb-0 ' key={service.id}>
+                <div
+                  className={xcls(
+                    'flex w-40 h-40 mx-auto  relative ',
+                    'p-3 mb-2 bg-[#D9DEE2] rounded-full'
+                  )}>
+                  <Image
+                    className=''
+                    src={service.image}
+                    width={140}
+                    height={140}
+                    alt='Service Baner'
+                  />
+                  <ServiceNumber index={index} />
                 </div>
                 <span className='text-center'>
                   <h1 className='mb-3 text-2xl tracking-wide text-gray-800'>{service.name}</h1>
@@ -41,6 +53,19 @@ const Services = ({ services }) => {
         </div>
       </div>
     </main>
+  )
+}
+
+// Put the service image number into a component for readability
+const ServiceNumber = ({ index }) => {
+  return (
+    <p
+      className={xcls(
+        'absolute right-3 flex items-center justify-center',
+        'w-8 h-8 text-gray-100 -mt-4 text-xl rounded-full bg-primary'
+      )}>
+      {index + 1}
+    </p>
   )
 }
 
