@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { FooterLogo, NavbarLogo } from '../icons'
-import { CgMenu } from 'react-icons/cg'
 import { useStateProvider } from '../context/StateContext'
 import MobileNav from './MobileNav'
 import { useState } from 'react'
@@ -25,7 +24,7 @@ const Navbar = () => {
         } md:fixed w-full top-0 py-5 md:px-14 px-5 z-10`}>
         <div className='flex items-center justify-between max-w-4xl mx-auto xl:max-w-6xl'>
           <Link href='/'>
-            <a>{scroll ? <FooterLogo /> : <NavbarLogo />}</a>
+            <a>{scroll ? <FooterLogo /> : <NavbarLogo />} </a>
           </Link>
           <div className='hidden md:block'>
             <div className='flex items-center space-x-2 text-gray-800'>
@@ -39,7 +38,7 @@ const Navbar = () => {
             onClick={toggleMobileMenu}
             className='md:hidden focus:outline-none'
             aria-label='Open mobile navs'>
-            <CgMenu className={`${scroll && 'text-gray-100'}`} size={30} />
+            <img src='/assets/img/menu.png' alt='Menu bar' />
           </button>
         </div>
       </nav>

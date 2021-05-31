@@ -1,4 +1,3 @@
-import { MdClose } from 'react-icons/md'
 import NavLinkItems from './NavLinkItems'
 
 const SideNav = ({ mobileMenu, toggleMobileMenu }) => {
@@ -10,7 +9,7 @@ const SideNav = ({ mobileMenu, toggleMobileMenu }) => {
       <div>
         <div className='flex items-center justify-between'>
           <button aria-label='hide mobile nav' onClick={toggleMobileMenu}>
-            <MdClose className='text-gray-100 hover:text-primary' size={25} />
+            <img src='/assets/img/close.png' alt='Close mobile menu' />
           </button>
         </div>
         <div className='flex flex-col pt-10 '>
