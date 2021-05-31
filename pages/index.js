@@ -12,7 +12,7 @@ const Home = ({ services }) => {
     company: 'Dotcentric',
     company2: 'Damage',
     message:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit Soluta ratione sit ipsam expedita fuga aut veniam error aspernatur adipisicing',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   }
   return (
     <Layout>

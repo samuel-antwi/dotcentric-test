@@ -5,7 +5,7 @@ const Services = ({ services }) => {
   return (
     <main className='flex justify-center max-w-4xl mx-auto mb-2 md:mb-20 xl:max-w-6xl md:px-0'>
       <div className='px-5 md:px-0'>
-        <div className='max-w-xl mx-auto mb-8 text-center md:mb-20 '>
+        <div className='max-w-2xl mx-auto mb-8 text-center md:mb-20 '>
           <Heading title='we do really awesome things' />
           <p className='text-sm text-gray-500 md:text-lg'>
             Lorem ipsum dolor sit,{' '}
@@ -27,13 +27,13 @@ const Services = ({ services }) => {
               (index === 1 && '/images/service-badge-2.svg') ||
               (index === 2 && '/images/service-badge-3.svg')
             return (
-              <div className='col-span-1 mb-8 md:mb-0' key={service.id}>
+              <div className='col-span-1 mb-8 md:px-5 md:mb-0' key={service.id}>
                 <div className='flex justify-center mb-2'>
                   <Image src={serviceImage} width={150} height={150} alt='Service Baner' />
                 </div>
                 <span className='text-center'>
-                  <h1 className='mb-3 text-xl'>{service.name}</h1>
-                  <p className='text-sm text-gray-600'>{service.description}</p>
+                  <h1 className='mb-3 text-2xl tracking-wide text-gray-800'>{service.name}</h1>
+                  <p className='text-gray-600 '>{service.description}</p>
                 </span>
               </div>
             )
