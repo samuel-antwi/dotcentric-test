@@ -23,13 +23,13 @@ const Services = ({ services }) => {
         <div className='grid-cols-3 gap-10 md:grid'>
           {services.map((service, index) => {
             const serviceImage =
-              (index === 0 && '/images/service-badge-1.png') ||
-              (index === 1 && '/images/service-badge-2.png') ||
-              (index === 2 && '/images/service-badge-3.png')
+              (index === 0 && '/images/service-badge.svg') ||
+              (index === 1 && '/images/service-badge-2.svg') ||
+              (index === 2 && '/images/service-badge-3.svg')
             return (
               <div className='col-span-1 mb-8 md:mb-0' key={service.id}>
                 <div className='flex justify-center mb-2'>
-                  <Image src={serviceImage} width={120} height={120} alt='Service Baner' />
+                  <Image src={serviceImage} width={150} height={150} alt='Service Baner' />
                 </div>
                 <span className='text-center'>
                   <h1 className='mb-3 text-xl'>{service.name}</h1>
