@@ -34,13 +34,14 @@ const Services = ({ services }) => {
                     'flex w-40 h-40 mx-auto  relative ',
                     'p-3 mb-2 bg-[#D9DEE2] rounded-full'
                   )}>
-                  <Image
+                  <img src={service.image} alt='Service Baner' />
+                  {/* <Image
                     className=''
                     src={service.image}
                     width={140}
                     height={140}
                     alt='Service Baner'
-                  />
+                  /> */}
                   <ServiceNumber index={index} />
                 </div>
                 <span className='text-center'>
