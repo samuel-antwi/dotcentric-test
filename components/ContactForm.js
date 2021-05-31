@@ -9,15 +9,15 @@ const ContactForm = () => {
   const { handleChange, values, handleSubmit, errors } = useForm(validate)
 
   return (
-    <main className='max-w-md px-5 mx-auto mb-10 md:px-0 md:mb-20'>
+    <main className='max-w-2xl px-5 mx-auto mb-10 md:px-0 md:mb-20'>
       <div className='text-center md:text-left'>
         <Heading title='contact about awesomeness' />
-        <p className='mb-10 text-gray-500 '>
+        <p className='mb-10 text-gray-500 md:text-2xl '>
           Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua.
         </p>
       </div>
-      <div className='max-w-md mx-auto md:px-6'>
+      <div className='max-w-xl mx-auto'>
         <form onSubmit={handleSubmit}>
           <InputField
             label='Your name'
