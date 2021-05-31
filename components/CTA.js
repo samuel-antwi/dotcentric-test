@@ -15,7 +15,7 @@ const CTA = () => {
         </div>
         <div className='px-4 mx-auto xl:max-w-6xl md:max-w-4xl xl:px-0 md:px-20'>
           <Image
-            src='/images/cta.jpg'
+            src='/assets/img/cta.jpg'
             width={1828}
             height={1110}
             alt='CTA Banner'
